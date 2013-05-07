@@ -1,7 +1,7 @@
 <!-- <!DOCTYPE html> --> <!-- Comment for Meteor -->
 <!-- <html> --> <!-- Comment for Meteor -->
   <head>
-    <title> Lungo Gallery </title>
+    <title> FEEDBAPP! </title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- <link rel="stylesheet" href="style/css/1-lungo-2.1.0.css"> --> <!-- Comment for Meteor -->
     <!-- <link rel="stylesheet" href="style/css/2-lungo.icon-2.1.0.css"> --> <!-- Comment for Meteor -->
@@ -19,21 +19,23 @@
             <span class="icon menu"></span>
           </a>
           <div class="title centered">
-            Lungo Gallery
+            FEEDBAPP!
           </div>
-          <a href="#add-app-section" data-router="section" data-icon="pencil" class="right"></a>
-          <a href="#inbox-section" data-router="section" class="right">
-            <span class="icon mail"></span>
-            <span class="tag count"> 2 </span>
-          </a>
+          <a href="#add-feedback" data-router="section" data-icon="pencil" class="right"></a>
         </nav>
       </header>
       <nav class="groupbar with-labels">
-        <a href="#latest-apps" data-router="article" data-label="Latest apps" data-count="2" class="active"></a>
-        <a href="#best-apps" data-router="article" data-label="Best apps" data-count="1"></a>
-        <a href="#popular-apps" data-router="article" data-label="Popular apps" data-count="3"></a>
+        <a href="#my-feedback" data-router="article" data-label="My feedback" class="active">
+          <span class="tag count"> 2 </span>
+        </a>
+        <a href="#my-groups" data-router="article" data-label="My groups">
+          <span class="tag count"> 1 </span>
+        </a>
+        <a href="#sent-feedback" data-router="article" data-label="Sent feedback">
+          <span class="tag count"> 3 </span>
+        </a>
       </nav>
-      <article id="latest-apps" class="scroll active">
+      <article id="my-feedback" class="scroll active">
         <div class="indented">
           <div>
             <a class="button anchor icon check"> Mark all as seen </a>
@@ -42,9 +44,9 @@
         <div class="list indented">
           <ul>
             <li data-image="http://lorempixel.com/200/200/abstract/" class="thumb selectable">
-              <a href="#app-section" data-router="section">
-                <span class="right tag">abstract</span>
-                <strong>App 1</strong>
+              <a href="#feedback-insight" data-router="section">
+                <span class="right tag cancel">mad</span>
+                <strong>I would recommend you to be more carefull when uploading code to the repository.</strong>
                 <small>by: author_1</small>
                 <div class="right">
                     <span data-icon="clock"></span>
@@ -54,8 +56,8 @@
             </li>
             <li data-image="http://lorempixel.com/200/200/food/" class="thumb selectable">
               <a href="#">
-                <span class="right tag">food</span>
-                <strong>App 2</strong>
+                <span class="right tag accept">happy</span>
+                <strong>Thanks dude! You saved my day finding those bugs before committing. </strong>
                 <small>by: author_2</small>
                 <div class="right">
                   <span data-icon="clock"></span>
@@ -65,9 +67,9 @@
             </li>
             <li data-image="http://lorempixel.com/200/200/people/" class="light thumb selectable">
               <a href="#">
-                <span class="right tag">people</span>
-                <strong>App 3</strong>
-                <small>by: author_3</small>
+                <span class="right tag secondary">neutral</span>
+                <strong>It would be great if you could tidy your table up a little bit ;-) Thanks!</strong>
+                <small>by: anonymous</small>
                 <div class="right">
                   <span data-icon="clock"></span>
                   <span class="tag secondary">07/02/2013 09:13</span>
@@ -76,8 +78,8 @@
             </li>
             <li data-image="http://lorempixel.com/200/200/technics/" class="light thumb selectable">
               <a href="#">
-                <span class="right tag">tech</span>
-                <strong>App 4</strong>
+                <span class="right tag default">thankful</span>
+                <strong>I really enjoyed your talk at the Web Technologies community today. Thanks!</strong>
                 <small>by: author_4</small>
                 <div class="right">
                   <span data-icon="clock"></span>
@@ -88,7 +90,7 @@
           </ul>
         </div>
       </article>
-      <article id="best-apps" class="scroll">
+      <article id="my-groups" class="scroll">
         <div class="indented">
           <div>
             <a class="button anchor icon check"> Mark all as seen </a>
@@ -98,8 +100,8 @@
           <ul>
             <li data-image="http://lorempixel.com/200/200/animals/" class="thumb selectable">
               <a href="#">
-                <span class="right tag">animals</span>
-                <strong>App 5</strong>
+                <span class="right tag secondary">neutral</span>
+                <strong>[RRHH] It would be great to have colleages acompanying new employees on their first day to show them the building and the most important services.</strong>
                 <small>by: author_5</small>
                 <div class="right">
                   <span data-icon="thumbs-up"></span>
@@ -109,8 +111,8 @@
             </li>
             <li data-image="http://lorempixel.com/200/200/nightlife/" class="light thumb selectable">
               <a href="#">
-                <span class="right tag">nightlife</span>
-                <strong>App 6</strong>
+                <span class="right tag secondary">neutral</span>
+                <strong>[Web Technologies] It would be great to have a series of talks about how to develop apps for the OWD.</strong>
                 <small>by: author_6</small>
                 <div class="right">
                   <span data-icon="thumbs-up"></span>
@@ -120,8 +122,8 @@
             </li>
             <li data-image="http://lorempixel.com/200/200/nature/" class="light thumb selectable">
               <a href="#">
-                <span class="right tag">nature</span>
-                <strong>App 7</strong>
+                <span class="right tag accept">happy</span>
+                <strong>[Fan Clubs] Sweet Fridays is awesome! ;-)</strong>
                 <small>by: author_7</small>
                 <div class="right">
                   <span data-icon="thumbs-up"></span>
@@ -132,19 +134,14 @@
           </ul>
         </div>
       </article>
-      <article id="popular-apps" class="scroll">
-        <div class="indented">
-          <div>
-            <a class="button anchor icon check"> Mark all as seen </a>
-          </div>
-        </div>
+      <article id="sent-feedback" class="scroll">
         <div class="list indented">
           <ul>
             <li data-image="http://lorempixel.com/200/200/transport/" class="thumb selectable">
               <a href="#">
-                <span class="right tag">transport</span>
-                <strong>App 8</strong>
-                <small>by: author_8</small>
+                <span class="right tag secondary">neutral</span>
+                <strong>I would appreciate if you could send me your daily reports at the end of the day instead of in the morning.</strong>
+                <small>to: author_8</small>
                 <div class="right">
                   <span data-icon="mail"></span>
                   <span class="tag secondary">7</span>
@@ -153,9 +150,9 @@
             </li>
               <li data-image="http://lorempixel.com/200/200/city/" class="thumb selectable">
                 <a href="#">
-                  <span class="right tag">city</span>
-                  <strong>App 9</strong>
-                  <small>by: author_9</small>
+                  <span class="right tag accept">happy</span>
+                  <strong>The mentors course was great! Thanks!</strong>
+                  <small>to: [RRHH]</small>
                   <div class="right">
                     <span data-icon="mail"></span>
                     <span class="tag secondary">5</span>
@@ -164,24 +161,20 @@
               </li>
               <li data-image="http://lorempixel.com/200/200/fashion/" class="thumb selectable">
                 <a href="#">
-                  <span class="right tag">fashion</span>
-                  <strong>App 10</strong>
-                  <small>by: author_10</small>
+                  <span class="right tag cancel">mad</span>
+                  <strong>Please, fill your IDP as soon as possible.</strong>
+                  <small>to: author_10</small>
                   <div class="right">
                     <span data-icon="mail"></span>
                     <span class="tag secondary">4</span>
                   </div>
                 </a>
               </li>
-              <li data-image="http://lorempixel.com/200/200/technics/" class="light thumb light selectable">
+              <li data-image="http://lorempixel.com/200/200/technics/" class="light thumb selectable">
                 <a href="#">
-                  <span class="right tag">tech</span>
-                  <strong>App 11</strong>
-                  <small>by: author_11</small>
-                  <div class="right">
-                    <span data-icon="mail"></span>
-                    <span class="tag secondary">3</span>
-                  </div>
+                  <span class="right tag default">thankful</span>
+                  <strong>Great talk, John! Thanks!</strong>
+                  <small>to: author_11</small>
                 </a>
               </li>
           </ul>
@@ -189,74 +182,61 @@
       </article>
       <footer>
         <nav>
-          <a href="#latest-apps" data-router="article" data-icon="clock"  data-count="2" class="active"></a>
-          <a href="#best-apps" data-router="article" data-icon="heart-full" data-count="1"></a>
-          <a href="#popular-apps" data-router="article" data-icon="star" data-count="3"></a>
+          <a href="#my-feedback" data-router="article" data-icon="user"  data-count="2" class="active"></a>
+          <a href="#my-groups" data-router="article" data-icon="users" data-count="1"></a>
+          <a href="#sent-feedback" data-router="article" data-icon="message"></a>
         </nav>
       </footer>
     </section>
-    <section id="app-section" data-transition="slide">
+    <section id="feedback-insight" data-transition="slide">
       <header class="extended">
         <nav>
           <a href="#back" data-router="section" data-icon="left"></a>
         </nav>
-        <span class="title centered icon mobile"> App name </span>
+        <span class="title centered"> Feedback insight </span>
       </header>
       <nav class="groupbar">
-        <a href="#app-info" data-router="article" class="active">
+        <a href="#feedback-info" data-router="article" class="active">
           <abbr> General Info </abbr>
         </a>
-        <a href="#app-comments" data-router="article">
+        <a href="#feedback-comments" data-router="article">
           <abbr> Coments</abbr>
           <span class="tag count"> 2 </span>
         </a>
       </nav>
-      <article id="app-info" class="active scroll">
-        <div class="indented">
-          <div class="button small">
-            <span class="icon inbox"></span>
-            <span> Subscribe </span>
-          </div>
-          <div class="button small" style="float: right;">
-            <span class="icon thumbs-up"></span>
-            <span> Like </span>
-          </div>
-        </div>
+      <article id="feedback-info" class="active scroll">
         <form>
           <span data-progress="0%"></span>
           <fieldset>
-            <label for="app-name">Name: </label>
-            <input id="app-name" name="app-name" type="text" placeholder="Name of the app...">
+            <label for="feedback-from">From: </label>
+            <input id="feedback-from" name="feedback-from" type="text" placeholder="author_1">
           </fieldset>
           <fieldset>
-            <label for="app-author">Author: </label>
-            <input id="app-author" name="app-author" type="text" placeholder="Author of the app...">
-          </fieldset>
-          <fieldset>
-            <label for="app-category">Category:</label>
-            <label id="app-category" name="app-category" class="select">
+            <label for="feedback-feeling">How was he feeling:</label>
+            <label id="feedback-feeling" name="feedback-feeling" class="select">
               <select>
-                <option value="1">None</option>
-                <option value="2">Second category</option>
-                <option value="3">Third category</option>
+                <option value="1">Happy</option>
+                <option value="2">Mad</option>
+                <option value="3">Neutral</option>
+                <option value="4">Thankull</option>
               </select>
             </label>
           </fieldset>
           <fieldset>
-            <label for="app-description"> Description:</label>
-            <textarea id="app-description" name="app-description" placeholder="Description of the app..."></textarea>
+            <label for="feedback-description"> Feedback:</label>
+            <textarea id="feedback-description" name="feedback-description" placeholder="The feedback text."></textarea>
           </fieldset>
           <fieldset data-icon="plus">
-            <label for="app-url">URL:</label>
-            <input id="app-url" name="app-url" type="text" placeholder="http://url-of-the-app">
+            <label for="feedback-url">Attachment:</label>
+            <input id="feedback-url" name="feedback-url" type="text" placeholder="http://url-of-the-attachment">
           </fieldset>
           <fieldset>
-            <label for="app-screenshot">Screenshot:</label>
-            <img id="app-screenshot" name="app-screenshot" src="http://lorempixel.com/200/200"></img>
+            <label for="feedback-url-preview">Preview:</label>
+            <img id="feedback-url-preview" name="feedback-url-preview" src="http://lorempixel.com/200/200"></img>
           </fieldset>
         </form>
       </article>
-      <article id="app-comments" class="scroll indented">
+      <article id="feedback-comments" class="scroll indented">
         <div>
           <a class="button anchor icon check"> Mark all as read </a>
         </div>
@@ -264,46 +244,42 @@
           <ul>
             <li data-icon="user" class="thumb selectable">
               <a href="#">
-                <span class="right tag">sports</span>
-                <strong>"This is a comment."</strong>
-                <small>by user_12</small>
                 <div class="right">
                   <span data-icon="clock"></span>
                   <span class="tag secondary">07/02/2013 15:34</span>
                 </div>
+                <strong>"This is a comment."</strong>
+                <small>by user_12</small>
               </a>
             </li>
               <li data-icon="user" class="thumb selectable">
                 <a href="#">
-                  <span class="right tag">fashion</span>
-                  <strong>"This is another comment."</strong>
-                  <small>by user_13</small>
                   <div class="right">
                     <span data-icon="clock"></span>
                     <span class="tag secondary">07/02/2013 14:32</span>
                   </div>
+                  <strong>"This is another comment."</strong>
+                  <small>by user_13</small>
                 </a>
               </li>
               <li data-icon="user" class="light thumb selectable">
                 <a href="#">
-                  <span class="right tag">sports</span>
-                  <strong>"This is a even another comment."</strong>
-                  <small>by user_14</small>
                   <div class="right">
                     <span data-icon="clock"></span>
                     <span class="tag secondary">07/02/2013 13:11</span>
                   </div>
+                  <strong>"This is a even another comment."</strong>
+                  <small>by user_13</small>
                 </a>
               </li>
               <li data-icon="user" class="light thumb selectable">
                 <a href="#">
-                  <span class="right tag">city</span>
-                  <strong>"This is a one other comment."</strong>
-                  <small>by user_15</small>
                   <div class="right">
                     <span data-icon="clock"></span>
                     <span class="tag secondary">07/02/2013 12:08</span>
                   </div>
+                  <strong>"This is a one other comment."</strong>
+                  <small>by user_12</small>
                 </a>
               </li>
           </ul>
@@ -317,8 +293,8 @@
       </article>
       <footer>
         <nav>
-          <a href="#app-info" data-router="article" data-icon="info" class="active"></a>
-          <a href="#app-comments" data-router="article">
+          <a href="#feedback-info" data-router="article" data-icon="info" class="active"></a>
+          <a href="#feedback-comments" data-router="article">
             <span class="icon mail"></span>
             <span class="tag count"> 2 </span>
           </a>
@@ -383,7 +359,7 @@
         <div class="list indented">
           <ul>
             <li data-image="http://lorempixel.com/200/200/abstract/" class="thumb selectable">
-              <a href="#app-section" data-router="section">
+              <a href="#feedback-insight" data-router="section">
                 <span class="right tag">abstract</span>
                 <strong>App 1</strong>
                 <small>by: author_1</small>
@@ -394,7 +370,7 @@
               </a>
             </li>
             <li data-image="http://lorempixel.com/200/200/technics/" class="thumb selectable">
-              <a href="#app-section" data-router="section">
+              <a href="#feedback-insight" data-router="section">
                 <span class="right tag">tech</span>
                 <strong>App 2</strong>
                 <small>by: author_1</small>
@@ -405,7 +381,7 @@
               </a>
             </li>
             <li data-image="http://lorempixel.com/200/200/sports/" class="thumb selectable">
-              <a href="#app-section" data-router="section">
+              <a href="#feedback-insight" data-router="section">
                 <span class="right tag">sports</span>
                 <strong>App 3</strong>
                 <small>by: author_1</small>
@@ -416,7 +392,7 @@
               </a>
             </li>
             <li data-image="http://lorempixel.com/200/200/city/" class="thumb selectable">
-              <a href="#app-section" data-router="section">
+              <a href="#feedback-insight" data-router="section">
                 <span class="right tag">city</span>
                 <strong>App 4</strong>
                 <small>by: author_1</small>
@@ -510,8 +486,8 @@
         </nav>   
       </footer>
     </section>
-    <section id="add-app-section" data-transition="slide">
-      <header data-title="New Lungo app" class="extended">
+    <section id="add-feedback" data-transition="slide">
+      <header data-title="New feedback" class="extended">
         <nav>
           <a href="#back" data-router="section" data-icon="left">
           </a>
@@ -521,46 +497,43 @@
         </nav>
       </header>
       <nav class="groupbar with-labels">
-        <a href="#add-app" data-router="article" data-label="Please fill the form:" class="active"></a>
+        <a href="#new-feedback" data-router="article" data-label="Please fill the form:" class="active"></a>
       </nav>
-      <article id="add-app" class="active scroll">
+      <article id="new-feedback" class="active scroll">
         <form>
           <span data-progress="0%"></span>
           <fieldset>
-            <label for="app-name">Name: </label>
-            <input id="app-name" name="app-name" type="text" placeholder="Name of the app...">
+            <label for="feedback-about">About: </label>
+            <input id="feedback-about" name="feedback-about" type="text" placeholder="Colleague user name or group...">
           </fieldset>
           <fieldset>
-            <label for="app-author">Name: </label>
-            <input id="app-author" name="app-author" type="text" placeholder="Author of the app...">
-          </fieldset>
-          <fieldset>
-            <label for="app-category">Category:</label>
-            <label id="app-category" name="app-category" class="select">
+            <label for="feedback-feeling">How are you feeling:</label>
+            <label id="feedback-feeling" name="feedback-feeling" class="select">
               <select>
-                <option value="1">None</option>
-                <option value="2">Second category</option>
-                <option value="3">Third category</option>
+                <option value="1">Happy</option>
+                <option value="2">Mad</option>
+                <option value="3">Neutral</option>
+                <option value="4">Thankull</option>
               </select>
             </label>
           </fieldset>
           <fieldset>
-            <label for="app-description"> Description:</label>
-            <textarea id="app-description" name="app-description" placeholder="Description of the app..."></textarea>
+            <label for="feedback-description"> Feedback:</label>
+            <textarea id="feedback-description" name="feedback-description" placeholder="Please, write your feedback here..."></textarea>
           </fieldset>
           <fieldset data-icon="plus">
-            <label for="app-url">URL:</label>
-            <input id="app-url" name="app-url" type="text" placeholder="http://url-of-the-app">
+            <label for="feedback-url">Attachment:</label>
+            <input id="feedback-url" name="feedback-url" type="text" placeholder="http://url-of-the-attachment">
           </fieldset>
           <fieldset>
-            <label for="app-screenshot">Screenshot:</label>
-            <img id="app-screenshot" name="app-screenshot" src="http://lorempixel.com/200/200"></img>
+            <label for="feedback-url-preview">Preview:</label>
+            <img id="feedback-url-preview" name="feedback-url-preview" src="http://lorempixel.com/200/200"></img>
           </fieldset>
         </form>
       </article>
       <footer>
         <nav>
-          <a href="#add-app" data-router="article" data-icon="pencil" class="active"></a>
+          <a href="#new-feedback" data-router="article" data-icon="pencil" class="active"></a>
         </nav>
       </footer>
     </section>
@@ -591,8 +564,9 @@
       <article id="menu-content" class="active list">
         <ul>
           <li>
-            <a href="#latest-apps" data-router="article">
+            <a href="#my-feedback" data-router="article">
               <strong> Home </strong>
+              <span class="right tag count"> 6 </span>
             </a>
           </li>
           <li>
@@ -606,14 +580,8 @@
             </a>
           </li>
           <li>
-            <a href="#inbox-section" data-router="section">
-              <strong> Inbox </strong>
-              <span class="right tag count"> 2 </span>
-            </a>
-          </li>
-          <li>
-            <a href="#add-app-section" data-router="section">
-              <strong> New app </strong>
+            <a href="#add-feedback" data-router="section">
+              <strong> New feedback </strong>
             </a>
           </li>
           <li>
