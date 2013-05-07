@@ -1,9 +1,9 @@
 // Meteor.startup(function() { // Uncomment for Meteor.
-//     Lungo.init({
-//         data: 'Lungo Gallery app',
-//         version: '2.0',
-//         resources: []
-//     });
+    Lungo.init({
+        data: 'Lungo Gallery app',
+        version: '2.0',
+        resources: []
+    });
 // }); // Uncomment for Meteor.
 
 $$('#latest-apps li').swipeLeft(function (ev) {
